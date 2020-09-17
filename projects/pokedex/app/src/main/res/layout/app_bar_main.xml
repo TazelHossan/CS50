@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="silio.pokedex.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="3dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!--
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/filterSearch"
+        android:gravity="center_horizontal"
+        >-->
+
+    <include layout="@layout/content_main" />
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:gravity="center_horizontal"
+        android:scrollbars="none"
+        android:elevation="3dp"
+        android:background="?attr/colorPrimary"
+        android:visibility="gone"
+        android:id="@+id/filter">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/filterSearch">
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/bug"
+                android:textOn="@string/bug"
+                android:textOff="@string/bug"/>
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/dark"
+                android:textOn="@string/dark"
+                android:textOff="@string/dark"/>
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/dragon"
+                android:textOn="@string/dragon"
+                android:textOff="@string/dragon"/>
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/electric"
+                android:textOn="@string/electric"
+                android:textOff="@string/electric"/>
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/fighting"
+                android:textOn="@string/fighting"
+                android:textOff="@string/fighting"/>
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/fire"
+                android:textOn="@string/fire"
+                android:textOff="@string/fire"/>
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/flying"
+                android:textOn="@string/flying"
+                android:textOff="@string/flying"/>
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/ghost"
+                android:textOn="@string/ghost"
+                android:textOff="@string/ghost"/>
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/grass"
+                android:textOn="@string/grass"
+                android:textOff="@string/grass"/>
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/ground"
+                android:textOn="@string/ground"
+                android:textOff="@string/ground"/>
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/ice"
+                android:textOn="@string/ice"
+                android:textOff="@string/ice"/>
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/normal"
+                android:textOn="@string/normal"
+                android:textOff="@string/normal"
+                />
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/poison"
+                android:textOn="@string/poison"
+                android:textOff="@string/poison"
+                />
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/psychic"
+                android:textOn="@string/psychic"
+                android:textOff="@string/psychic"
+                />
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/rock"
+                android:textOn="@string/rock"
+                android:textOff="@string/rock"
+                />
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/steel"
+                android:textOn="@string/steel"
+                android:textOff="@string/steel"
+                />
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/water"
+                android:textOn="@string/water"
+                android:textOff="@string/water"
+                />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_keyboard_arrow_up_black_24dp"
+        android:tint="@color/colorIcons"/>
+
+
+
+</android.support.design.widget.CoordinatorLayout>
